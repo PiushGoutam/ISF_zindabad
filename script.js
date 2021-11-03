@@ -55,7 +55,7 @@ function setup(){
         xhr.onreadystatechange = function() {
             if(xhr.readyState === 4 && xhr.status == 200){
                 
-                alert(JSON.parse(xhr.response))
+                alert(xhr.response)
 
             }
         }
