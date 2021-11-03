@@ -58,6 +58,7 @@ function setup(){
 
             }
         }
+        xhr.open("POST",createWorkOrderPlan)
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("Cache-Control", "no-cache");
         xhr.setRequestHeader("Apim-Subscription-Key", "1ca9ba625d3a42c1bf21cf1e2b9d8af4")
