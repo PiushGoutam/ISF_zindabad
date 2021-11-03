@@ -15,15 +15,49 @@ function setup(){
         var nodetype = document.getElementById("nodetype").value
 
         
+        params = {
+            "projectID":"21782", //project id give
+            "priority":"High",
+            "startDate":timestr2,
+            "startTime":timestr1,
+            "wOName":"WRAN SiteTuning", //WF name
+            "assignedTo":signum,
+            "lastModifiedBy":"esharpi", //ignum WF owner
+            "listOfNode":[
+               {
+                  "nodeNames":nodename,
+                  "nodeType":nodetype
+               }
+            ],
+            "comment":"GNET",
+            "executionPlanName":"WCDMA_New Site Optimization_Eric",  //Deliverable Plan ID
+            "externalSourceName":"GNET"
+         }
+
+
+
+
+
+
+
         
 
         createWorkOrderPlan = "https://integratedserviceflow.ericsson.net/apim/v1/externalInterface/createWorkOrderPlan/"
 
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4 && xhr.status == 200){
+                console.log("Done!")
+
+            }
+        }
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Cache-Control", "no-cache");
+        xhr.setRequestHeader("Apim-Subscription-Key", "1ca9ba625d3a42c1bf21cf1e2b9d8af4")
+        xhr.send(JSON.stringify(params));
 
 
-
-
-        console.log(val)
+        alert("Done bro!")
     }
 
 
