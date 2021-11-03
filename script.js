@@ -17,10 +17,8 @@ function setup(){
         var today = new Date();
         var date = today.toJSON().slice(0, 10);
         var nTime = today.toTimeString().slice(0,8)
-        var nDate = date.slice(8, 10) + '-' 
-                       + date.slice(5, 7) + '-' 
-                       + date.slice(0, 4);
-
+        var nDate = date.slice(0, 4) + '-' +date.slice(5,7) + '-' +  date.slice(8, 10);
+                       
         
         params = {
             "projectID":"21782", //project id give
