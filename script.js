@@ -14,12 +14,19 @@ function setup(){
         var nodename = document.getElementById("nodename").value
         var nodetype = document.getElementById("nodetype").value
 
+        var today = new Date();
+        var date = today.toJSON().slice(0, 10);
+        var nTime = today.toTimeString().slice(0,8)
+        var nDate = date.slice(8, 10) + '-' 
+                       + date.slice(5, 7) + '-' 
+                       + date.slice(0, 4);
+
         
         params = {
             "projectID":"21782", //project id give
             "priority":"High",
-            "startDate":timestr2,
-            "startTime":timestr1,
+            "startDate":nDate,
+            "startTime":nTime,
             "wOName":"WRAN SiteTuning", //WF name
             "assignedTo":signum,
             "lastModifiedBy":"esharpi", //ignum WF owner
@@ -47,7 +54,7 @@ function setup(){
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if(xhr.readyState === 4 && xhr.status == 200){
-                console.log("Done!")
+                alert("Done bro done!")
 
             }
         }
@@ -57,7 +64,7 @@ function setup(){
         xhr.send(JSON.stringify(params));
 
 
-        alert("Done bro!")
+        
     }
 
 
