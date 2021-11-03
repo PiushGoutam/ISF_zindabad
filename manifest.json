@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "EzyISF",
+    "description": "A google chrome extension to automate Work Order creation in ISF (Ericsson) and in the process make your life a little easier",
+    "version": "1.0.0",
+    "icons": {
+        "16": "images/icons8-businesswoman-16.png",
+        "48": "images/icons8-businesswoman-48.png",
+        "128": "images/icons8-businesswoman-100.png"
+    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icons8-businesswoman-16.png",
+            "48": "images/icons8-businesswoman-48.png",
+            "128": "images/icons8-businesswoman-100.png"
+        }
+        
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
